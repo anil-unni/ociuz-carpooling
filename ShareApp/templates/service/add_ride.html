@@ -1,0 +1,213 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>Login</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Validify Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="/static/service/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="/static/service/css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body>
+<style type="text/css">
+	#customers {
+
+		width: 100%;
+	    color: #fff;
+	    outline: none;
+	    font-size: 14px;
+	    letter-spacing: 1px;
+	    padding: 15px 15px;
+	    box-sizing: border-box;
+	    border: none;
+	    background: rgba(4, 4, 4, 0.61);
+	    border: 1px solid #FFC107;
+	    box-shadow: 1px 5px 12px 0px rgba(0, 0, 0, 0.46);
+	}
+
+
+
+#date_picker {
+
+		width: 100%;
+	    color: #fff;
+	    outline: none;
+	    font-size: 14px;
+	    letter-spacing: 1px;
+	    padding: 15px 15px;
+	    box-sizing: border-box;
+	    border: none;
+	    background: rgba(4, 4, 4, 0.61);
+	    border: 1px solid #FFC107;
+	    box-shadow: 1px 5px 12px 0px rgba(0, 0, 0, 0.46);
+	}
+
+	
+	</style>
+	<!-- title -->
+	<h1>
+		<!-- <span>V</span>alidify -->
+		<span>Add</span>Ride
+		<!-- <span>F</span>orm -->
+	</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form  action="/add_ride/" method="post">
+     {% csrf_token %}
+			<h2></h2>
+			<div class="form-group">
+				<input type="text" id="customers" class="form-control textbox" name="start" placeholder="Starting point" required="">
+			</div>
+			<div class="form-group">
+				<input type="text" id="customers" class="form-control textbox" name="end" placeholder="Destination " required="">
+			</div>
+			<div class="form-group">
+				<input type="text"  maxlength="10" id="customers" class="form-control textbox" name="cost" placeholder="Cost" required="">
+			</div>
+			<div class="form-group">
+				<input type="date"  maxlength="10" id="date_picker" class="form-control textbox" name="date" placeholder="Date" required="">
+
+
+<!-- <input id="date_picker" type="date"> -->
+
+
+
+			</div>
+			<div class="form-group">
+				<input type="time"  maxlength="10" id="customers" class="form-control textbox" name="start_time" placeholder="Start time" required="">
+			</div>
+			<!-- <div class="form-group">
+				<input type="text"  maxlength="10" id="customers" class="form-control textbox" name="end_time" placeholder="Arrival time" required="">
+			</div> -->
+			<div class="form-group">
+				<input type="text"  maxlength="10" id="customers" class="form-control textbox" name="no_of_pass" placeholder="No.of Passengers" required="">
+			</div>
+			<div class="form-group">
+				<input type="text"   id="customers" class="form-control textbox" name="ride_details" placeholder="Ride details" required="">
+			</div>
+			<div class="form-group">
+				<select id="customers" name="gender" class="form-control">
+                <option disabled selected>Gender Preference</option>
+                
+               <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Female">Both</option>
+
+
+                 </select>
+				
+			</div>
+			<div class="form-group">
+				<select id="customers" name="vehicle" class="form-control">
+                <option disabled selected>Vehicle type</option>
+                
+               <option value="4 wheeler">4 wheeler</option>
+                <option value="2 wheeler">2 wheeler</option>
+                <option value="6 wheeler">6 wheeler</option>
+
+
+                 </select>
+				
+			</div>
+			
+			<div class="form-group">
+				<button class="btn btn-default btn-osx btn-lg"  type="submit">
+					<i class="fas fa-long-arrow-alt-right"></i>
+				</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+
+			
+			
+		</form>
+
+
+		<!-- //switch -->
+	</div>
+	<h1>
+		<!-- <span>V</span>alidify -->
+		<div class="form-group">
+				
+				<a href="/u_index/"><button class="btn btn-default btn-osx btn-lg" >
+					<i >Back</i>
+				</button></a>
+			</div>
+		
+	</h1>
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<!-- <p>&copy; 2018 Validify Login Form. All rights reserved | Design by
+			<a href="http://w3layouts.com">W3layouts</a>
+		</p> -->
+	</div>
+	<!-- //copyright -->
+
+	<!-- Jquery -->
+	 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script language="javascript">
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+    $('#date_picker').attr('min',today);
+</script>
+	<script src="/static/service/js/jquery-2.2.3.min.js"></script>
+	<!-- //Jquery -->
+	<!-- validify plugin -->
+	<script src="/static/service/js/validify.js"></script>
+	<script>
+		$("#demo").validify({
+			onSubmit: function (e, $this) {
+				$this.find('.alert').removeClass('hidden')
+			},
+			onFormSuccess: function (form) {
+				console.log("Form is valid now!")
+			},
+			onFormFail: function (form) {
+				console.log("Form is not valid :(")
+			}
+		});
+		$("#demo").validify({
+			errorStyle: "validifyError",
+			successStyle: "validifySuccess",
+			emailFieldName: "email",
+			emailCheck: true,
+			requiredAttr: "required",
+		});
+	</script>
+	<!-- //validify plugin -->
+
+</body>
+
+</html>

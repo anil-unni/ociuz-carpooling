@@ -1,0 +1,540 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>Login</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Validify Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="/static/service/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="/static/service/css/fontawesome-all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Nova+Round" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body>
+<style type="text/css">
+	#customers {
+
+		width: 100%;
+	    color: #fff;
+	    outline: none;
+	    font-size: 14px;
+	    letter-spacing: 1px;
+	    padding: 15px 15px;
+	    box-sizing: border-box;
+	    border: none;
+	    background: rgba(4, 4, 4, 0.61);
+	    border: 1px solid #FFC107;
+	    box-shadow: 1px 5px 12px 0px rgba(0, 0, 0, 0.46);
+	}
+	</style>
+		<style type="text/css">
+		#customers {
+		  font-family: Arial, Helvetica, sans-serif;
+		  border-collapse: collapse;
+		  width: 80%;
+		  margin-left: auto;
+    	  margin-right: auto;
+    	  margin-bottom: 100px;
+    	  margin-top: 	auto;
+    	  border: 10px;
+		}
+
+		#customers td, #customers th {
+		  border: 1px solid #ddd;
+		  padding: 8px;
+		}
+
+		#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+		#customers tr:hover {background-color: #e5e6ba;
+			color:black;}
+
+		#customers th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: left;
+		  background-color: #FFC107;
+		  color: white;
+		}
+		 td {
+        border: 1px solid #666;
+        word-break: break-all;
+      }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: pink;
+  /*font-family: arial;*/
+}
+
+
+	</style>
+	<!-- title -->
+	<h1>
+		<!-- <span>V</span>alidify -->
+		<div class="form-group" style="overflow-x:auto;">
+				<a href="/s_logout/"><button class="btn btn-default btn-osx btn-lg" >
+					<i >Logout</i>
+				</button></a>
+				<a href="/index_pass/"><button class="btn btn-default btn-osx btn-lg" >
+					<i >Back</i>
+				</button></a>
+			</div>
+			
+	</h1>
+
+<h1>
+		<div class="form-group" style="overflow-x:auto;">
+				
+			</div>
+			<span>Requested List</span> 
+	</h1>
+
+
+
+
+	<div class="sub-main-w3">
+
+		
+	<table id="customers" cellpadding="0" cellspacing="0" border="10" class="">
+		<thead>		
+		 <tr>
+                  <th style="width:2px;">Journey Details</th>
+                  <th style="width:2px;">Your Route</th>
+                  <th style="width:2px;"><i class="fa fa-trash-o" aria-hidden="true"></i></th>
+
+                
+       
+              
+                 
+                </tr>
+                </thead>
+                <tbody>
+                 
+
+                 {% for x in var4  %}
+
+                <tr>
+                  
+                  <td style="width:2px;">Date:{{x.v_id.date}}<br>
+                 Time:{{x.v_id.start_time}}<br>
+                 Cost:{{x.v_id.cost}}<br>
+                 Gender preference:{{x.v_id.gender}}<br>
+                 No.of passengers:{{x.v_id.no_pass}}<br>
+                  	Start place:{{x.start}}<br>
+                  	Destination:{{x.dest}}<br>
+                  Purpose:{{x.v_id.details}}<br>
+
+                -----------------------------------<br>
+                Driver Details
+                <br>-----------------------<br>
+                {{x.v_id.user.name}}<br>
+                  	{{x.v_id.user.mobile_Number}}<br>
+                  
+                  </td>
+
+                  <td style="width:2px;"> 
+                  	Pickup point  :{{x.start}}<br>
+                  	Destination   :{{x.dest}}<br>
+                 	Bearable cost :{{x.cost}}</pre><br><br>
+                 Meeting Details<br>
+---------------<br>
+Link:<a href="{{x.link}}" target="_blank" style="color:#e80e19;">{{x.link}} </a><br>
+Date:{{x.date}}<br>
+Time:{{x.time}}
+</td>
+
+ 		<td><a href="/remove_rideee/?id={{x.id}}"><button><i class="fa fa-trash-o" aria-hidden="true"></i></button></a><br>
+ 	</td>
+
+
+   
+
+        
+                </tr>
+            </tbody>
+		{% endfor %}
+            </tbody>
+		
+	</table>
+		<!-- //switch -->
+	</div>
+
+
+	<h1>
+		<div class="form-group" style="overflow-x:auto;">
+				
+			</div>
+			<span>Discussion List</span> 
+	</h1>
+
+
+
+
+	<div class="sub-main-w3">
+
+		
+	<table id="customers" cellpadding="0" cellspacing="0" border="10" class="">
+		<thead>		
+		 <tr>
+                  <th style="width:2px;">Journey Details</th>
+                  <th style="width:2px;">Your Route</th>
+                  <th style="width:2px;"></th>
+
+                
+       
+              
+                 
+                </tr>
+                </thead>
+                <tbody>
+                 
+
+                 {% for x in var3  %}
+
+                <tr>
+                  
+                  <td style="width:2px;">Date:{{x.v_id.date}}<br>
+                 Time:{{x.v_id.start_time}}<br>
+                 Cost:{{x.v_id.cost}}<br>
+                 Gender preference:{{x.v_id.gender}}<br>
+                 No.of passengers:{{x.v_id.no_pass}}<br>
+                  	Start place:{{x.start}}<br>
+                  	Destination:{{x.dest}}<br>
+                  Purpose:{{x.v_id.details}}<br>
+
+                -----------------------------------<br>
+                Driver Details
+                <br>-----------------------<br>
+                {{x.v_id.user.name}}<br>
+                  	{{x.v_id.user.mobile_Number}}<br>
+                  
+                  </td>
+
+                  <td style="width:2px;"> 
+                  	Pickup point  :{{x.start}}<br>
+                  	Destination   :{{x.dest}}<br>
+                 	Bearable cost :{{x.cost}}</pre><br><br>
+                 Meeting Details<br>
+---------------<br>
+Link:<a href="{{x.link}}" target="_blank" style="color:#e80e19;">{{x.link}} </a><br>
+Date:{{x.date}}<br>
+Time:{{x.time}}
+</td>
+
+ 		<td><a href="/approve_ride_pass/?id={{x.id}}"><button><i class="fa fa-check" aria-hidden="true"></i></button></a><br>
+ 	<a href="/reject_ride_pass/?id={{x.id}}"><button><i class="fa fa-close" aria-hidden="true"></i></button></a></td>
+
+
+   
+
+        
+                </tr>
+            </tbody>
+		{% endfor %}
+            </tbody>
+		
+	</table>
+		<!-- //switch -->
+	</div>
+
+
+
+	<h1>
+		<!-- <span>V</span>alidify -->
+		<div class="form-group" style="overflow-x:auto;">
+				
+			</div>
+			<span>Approved </span>List 
+		<!-- <span>F</span>orm -->
+	</h1>
+
+	<div class="sub-main-w3">
+
+		
+	<table id="customers" cellpadding="0" cellspacing="0" border="10" class="">
+		<thead>		
+		 <tr>
+                  <th style="width:2px;">Journey Details</th>
+                  <th style="width:2px;">Your Route</th>
+                  <th style="width:2px;">Finish</th>
+
+                
+       
+              
+                 
+                </tr>
+                </thead>
+                <tbody>
+                 
+
+                 {% for x in var  %}
+
+                <tr>
+                  
+                  <td style="width:2px;">Date:{{x.v_id.date}}<br>
+                 Time:{{x.v_id.start_time}}<br>
+                 Cost:{{x.v_id.cost}}<br>
+                 Gender preference:{{x.v_id.gender}}<br>
+                 No.of passengers:{{x.v_id.no_pass}}<br>
+                  	Start place:{{x.start}}<br>
+                  	Destination:{{x.dest}}<br>
+                  Purpose:{{x.v_id.details}}<br>
+
+                -----------------------------------<br>
+                Driver Details
+                <br>-----------------------<br>
+                {{x.v_id.user.name}}<br>
+                  	{{x.v_id.user.mobile_Number}}<br>
+                  
+                  </td>
+
+                  <td style="width:2px;"> 
+                  	Pickup point  :{{x.start}}<br>
+                  	Destination   :{{x.dest}}<br>
+                 	Bearable cost :{{x.cost}}</pre> <br>
+
+
+                 </td>
+
+ 		<td style="width:.5px;"><a href="/finish/?id={{x.id}}"><button>Finish</button></a></td>
+
+
+   
+
+        
+                </tr>
+            </tbody>
+		{% endfor %}
+            </tbody>
+		
+	</table>
+		<!-- //switch -->
+	</div>
+
+
+
+
+
+
+<h1>
+		<!-- <span>V</span>alidify -->
+		<div class="form-group" style="overflow-x:auto;">
+				
+			</div>
+			<span>Rejected </span>List 
+		<!-- <span>F</span>orm -->
+	</h1>
+
+	<div class="sub-main-w3">
+
+		
+	<table id="customers" cellpadding="0" cellspacing="0" border="10" class="">
+		<thead>		
+		 <tr>
+                  <th style="width:2px;">Journey Details</th>
+                  <th style="width:2px;">Your Route</th>
+                  <!-- <th style="width:2px;">Finish</th> -->
+
+                
+       
+              
+                 
+                </tr>
+                </thead>
+                <tbody>
+                 
+
+                 {% for x in var5  %}
+
+                <tr>
+                  
+                  <td style="width:2px;">Date:{{x.v_id.date}}<br>
+                 Time:{{x.v_id.start_time}}<br>
+                 Cost:{{x.v_id.cost}}<br>
+                 Gender preference:{{x.v_id.gender}}<br>
+                 No.of passengers:{{x.v_id.no_pass}}<br>
+                  	Start place:{{x.start}}<br>
+                  	Destination:{{x.dest}}<br>
+                  Purpose:{{x.v_id.details}}<br>
+
+                -----------------------------------<br>
+                Driver Details
+                <br>-----------------------<br>
+                {{x.v_id.user.name}}<br>
+                  	{{x.v_id.user.mobile_Number}}<br>
+                  
+                  </td>
+
+                  <td style="width:2px;"> 
+                  	Pickup point  :{{x.start}}<br>
+                  	Destination   :{{x.dest}}<br>
+                 	Bearable cost :{{x.cost}}</pre> <br>
+
+
+                 </td>
+
+ 		<!-- <td style="width:.5px;"><a href="/finish/?id={{x.id}}"><button>Finish</button></a></td> -->
+
+
+   
+
+        
+                </tr>
+            </tbody>
+		{% endfor %}
+            </tbody>
+		
+	</table>
+		<!-- //switch -->
+	</div>
+
+
+
+
+
+
+
+
+
+<h1>
+		<!-- <span>V</span>alidify -->
+		<div class="form-group" style="overflow-x:auto;">
+				
+			</div>
+			<span>Finished </span>List 
+		<!-- <span>F</span>orm -->
+	</h1>
+
+	<div class="sub-main-w3">
+
+		
+	<table id="customers" cellpadding="0" cellspacing="0" border="10" width="50%">
+		<thead>		
+		 <tr>
+                  <th style="text-align: center;">Passenger Details</th>
+                  <th style="text-align: center;">Route</th>
+                  <th style="text-align: center;">Rate Driver</th>
+
+                  <!-- <th ><i class="fa fa-trash-o"></th> -->
+                  	<!-- <th><i class="fa fa-check"></i></th> -->
+                
+       
+              
+                 
+                </tr>
+                </thead>
+                <tbody>
+                  {% for x in var1  %}
+
+               <tr>
+                  
+                  <td style="width:2px;">Date:{{x.v_id.date}}<br>
+                 Time:{{x.v_id.start_time}}<br>
+                 Cost:{{x.v_id.cost}}<br>
+                 Gender preference:{{x.v_id.gender}}<br>
+                 No.of passengers:{{x.v_id.no_pass}}<br>
+                  	Start place:{{x.start}}<br>
+                  	Destination:{{x.dest}}<br>
+                  Purpose:{{x.v_id.details}}<br>
+
+                -----------------------------------<br>
+                Driver Details
+                <br>-----------------------<br>
+                {{x.v_id.user.name}}<br>
+                  	{{x.v_id.user.mobile_Number}}<br>
+                  
+                  </td>
+
+                  <td style="width:2px;"> 
+                  	Pickup point  :{{x.start}}<br>
+                  	Destination   :{{x.dest}}<br>
+                 	Bearable cost :{{x.cost}}</pre></td>
+
+ 		<td style="width:.5px;"><a href="/rate_driver/?id={{x.id}}"><button>Rate Driver</button></a></td>
+
+
+   
+
+        
+                </tr>
+            </tbody>
+		{% endfor %}
+
+	</table>
+		<!-- //switch -->
+	</div>
+
+
+
+
+
+
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<!-- <p>&copy; 2018 Validify Login Form. All rights reserved | Design by
+			<a href="http://w3layouts.com">W3layouts</a>
+		</p> -->
+	</div>
+	<!-- //copyright -->
+
+	<!-- Jquery -->
+	<script src="/static/service/js/jquery-2.2.3.min.js"></script>
+	<!-- //Jquery -->
+	<!-- validify plugin -->
+	<script src="/static/service/js/validify.js"></script>
+	<script>
+		$("#demo").validify({
+			onSubmit: function (e, $this) {
+				$this.find('.alert').removeClass('hidden')
+			},
+			onFormSuccess: function (form) {
+				console.log("Form is valid now!")
+			},
+			onFormFail: function (form) {
+				console.log("Form is not valid :(")
+			}
+		});
+		$("#demo").validify({
+			errorStyle: "validifyError",
+			successStyle: "validifySuccess",
+			emailFieldName: "email",
+			emailCheck: true,
+			requiredAttr: "required",
+		});
+	</script>
+	<!-- //validify plugin -->
+
+</body>
+
+</html>
